@@ -1,0 +1,18 @@
+#allows a single uri through the .htaccess password protection
+SetEnvIf Request_URI "/admin$" test_uri
+
+#allows everything if its on a certain host
+SetEnvIf HOST "^http://amen-team.lara/" testing_url
+Order Deny,Allow
+
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile D:/MyWork/Testovie/amen.team/amen-team.lara/book-store/public/.htpasswd
+AuthGroupFile /
+Require valid-user
+
+#Allow valid-user
+Deny from all
+Allow from env=test_uri
+Allow from env=testing_url
+Satisfy any

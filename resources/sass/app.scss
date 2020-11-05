@@ -1,0 +1,19 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.review{
+  background: #e3e5e6;
+  padding: 10px;
+  margin-bottom: 7px;
+  border-radius: 10px;
+}
+.review .name{
+  font-weight: 600;
+}
+
